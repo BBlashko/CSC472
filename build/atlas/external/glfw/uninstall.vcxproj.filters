@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\GitWorkspace\CSC472\atlas\external\glfw\CMakeLists.txt" />
+    <CustomBuild Include="C:\GitWorkspace\CSC472\build\CMakeFiles\310da0ed907efcdd3a48fd12d05023c0\uninstall.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\GitWorkspace\CSC472\build\atlas\external\glfw\CMakeFiles\uninstall" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{121712D6-7049-35AB-BBF0-685615EE2D3E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

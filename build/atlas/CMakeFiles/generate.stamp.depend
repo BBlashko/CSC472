@@ -1,0 +1,14 @@
+# CMake generation dependency list for this directory.
+C:/GitWorkspace/CSC472/atlas/CMakeLists.txt
+C:/GitWorkspace/CSC472/atlas/config/Compiler.cmake
+C:/GitWorkspace/CSC472/atlas/config/Externals.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/FindDoxygen.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/CMakeParseArguments.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/FindOpenGL.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.7/Modules/CMakeParseArguments.cmake
+C:/GitWorkspace/CSC472/atlas/docs/Doxyfile.in
+C:/GitWorkspace/CSC472/atlas/config/SourceGroups.cmake

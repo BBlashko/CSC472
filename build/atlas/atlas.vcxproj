@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{0AD912FA-5A1A-383C-B259-041D03E2F56B}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>atlas</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\GitWorkspace\CSC472\build\atlas\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">atlas.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">atlas</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\GitWorkspace\CSC472\build\atlas\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">atlas.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">atlas</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\GitWorkspace\CSC472\build\atlas\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">atlas.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">atlas</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\GitWorkspace\CSC472\build\atlas\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">atlas.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">atlas</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\GitWorkspace\CSC472\atlas\external\glfw\include;C:\GitWorkspace\CSC472\atlas\external\glm;C:\GitWorkspace\CSC472\atlas\external\tinyobjloader\include;C:\GitWorkspace\CSC472\atlas\external\stb\include;C:\GitWorkspace\CSC472\atlas\external\imgui\include;C:\GitWorkspace\CSC472\atlas\external\gl3w\include;C:\GitWorkspace\CSC472\atlas\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4201</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\GitWorkspace\CSC472\atlas\external\glfw\include;C:\GitWorkspace\CSC472\atlas\external\glm;C:\GitWorkspace\CSC472\atlas\external\tinyobjloader\include;C:\GitWorkspace\CSC472\atlas\external\stb\include;C:\GitWorkspace\CSC472\atlas\external\imgui\include;C:\GitWorkspace\CSC472\atlas\external\gl3w\include;C:\GitWorkspace\CSC472\atlas\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\GitWorkspace\CSC472\atlas\external\glfw\include;C:\GitWorkspace\CSC472\atlas\external\glm;C:\GitWorkspace\CSC472\atlas\external\tinyobjloader\include;C:\GitWorkspace\CSC472\atlas\external\stb\include;C:\GitWorkspace\CSC472\atlas\external\imgui\include;C:\GitWorkspace\CSC472\atlas\external\gl3w\include;C:\GitWorkspace\CSC472\atlas\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\GitWorkspace\CSC472\atlas\external\glfw\include;C:\GitWorkspace\CSC472\atlas\external\glm;C:\GitWorkspace\CSC472\atlas\external\tinyobjloader\include;C:\GitWorkspace\CSC472\atlas\external\stb\include;C:\GitWorkspace\CSC472\atlas\external\imgui\include;C:\GitWorkspace\CSC472\atlas\external\gl3w\include;C:\GitWorkspace\CSC472\atlas\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4201</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\GitWorkspace\CSC472\atlas\external\glfw\include;C:\GitWorkspace\CSC472\atlas\external\glm;C:\GitWorkspace\CSC472\atlas\external\tinyobjloader\include;C:\GitWorkspace\CSC472\atlas\external\stb\include;C:\GitWorkspace\CSC472\atlas\external\imgui\include;C:\GitWorkspace\CSC472\atlas\external\gl3w\include;C:\GitWorkspace\CSC472\atlas\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\GitWorkspace\CSC472\atlas\external\glfw\include;C:\GitWorkspace\CSC472\atlas\external\glm;C:\GitWorkspace\CSC472\atlas\external\tinyobjloader\include;C:\GitWorkspace\CSC472\atlas\external\stb\include;C:\GitWorkspace\CSC472\atlas\external\imgui\include;C:\GitWorkspace\CSC472\atlas\external\gl3w\include;C:\GitWorkspace\CSC472\atlas\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\GitWorkspace\CSC472\atlas\external\glfw\include;C:\GitWorkspace\CSC472\atlas\external\glm;C:\GitWorkspace\CSC472\atlas\external\tinyobjloader\include;C:\GitWorkspace\CSC472\atlas\external\stb\include;C:\GitWorkspace\CSC472\atlas\external\imgui\include;C:\GitWorkspace\CSC472\atlas\external\gl3w\include;C:\GitWorkspace\CSC472\atlas\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4201</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\GitWorkspace\CSC472\atlas\external\glfw\include;C:\GitWorkspace\CSC472\atlas\external\glm;C:\GitWorkspace\CSC472\atlas\external\tinyobjloader\include;C:\GitWorkspace\CSC472\atlas\external\stb\include;C:\GitWorkspace\CSC472\atlas\external\imgui\include;C:\GitWorkspace\CSC472\atlas\external\gl3w\include;C:\GitWorkspace\CSC472\atlas\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\GitWorkspace\CSC472\atlas\external\glfw\include;C:\GitWorkspace\CSC472\atlas\external\glm;C:\GitWorkspace\CSC472\atlas\external\tinyobjloader\include;C:\GitWorkspace\CSC472\atlas\external\stb\include;C:\GitWorkspace\CSC472\atlas\external\imgui\include;C:\GitWorkspace\CSC472\atlas\external\gl3w\include;C:\GitWorkspace\CSC472\atlas\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\GitWorkspace\CSC472\atlas\external\glfw\include;C:\GitWorkspace\CSC472\atlas\external\glm;C:\GitWorkspace\CSC472\atlas\external\tinyobjloader\include;C:\GitWorkspace\CSC472\atlas\external\stb\include;C:\GitWorkspace\CSC472\atlas\external\imgui\include;C:\GitWorkspace\CSC472\atlas\external\gl3w\include;C:\GitWorkspace\CSC472\atlas\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4201</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\GitWorkspace\CSC472\atlas\external\glfw\include;C:\GitWorkspace\CSC472\atlas\external\glm;C:\GitWorkspace\CSC472\atlas\external\tinyobjloader\include;C:\GitWorkspace\CSC472\atlas\external\stb\include;C:\GitWorkspace\CSC472\atlas\external\imgui\include;C:\GitWorkspace\CSC472\atlas\external\gl3w\include;C:\GitWorkspace\CSC472\atlas\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\GitWorkspace\CSC472\atlas\external\glfw\include;C:\GitWorkspace\CSC472\atlas\external\glm;C:\GitWorkspace\CSC472\atlas\external\tinyobjloader\include;C:\GitWorkspace\CSC472\atlas\external\stb\include;C:\GitWorkspace\CSC472\atlas\external\imgui\include;C:\GitWorkspace\CSC472\atlas\external\gl3w\include;C:\GitWorkspace\CSC472\atlas\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\GitWorkspace\CSC472\atlas\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/GitWorkspace/CSC472/atlas/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/GitWorkspace/CSC472 -BC:/GitWorkspace/CSC472/build --check-stamp-file C:\GitWorkspace\CSC472\build\atlas\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/GitWorkspace/CSC472/atlas/CMakeLists.txt;C:\GitWorkspace\CSC472\atlas\CMakeLists.txt;C:\GitWorkspace\CSC472\atlas\config\Compiler.cmake;C:\GitWorkspace\CSC472\atlas\config\Externals.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeParseArguments.cmake;C:\GitWorkspace\CSC472\atlas\docs\Doxyfile.in;C:\GitWorkspace\CSC472\atlas\config\SourceGroups.cmake;C:\GitWorkspace\CSC472\atlas\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\GitWorkspace\CSC472\build\atlas\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/GitWorkspace/CSC472/atlas/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/GitWorkspace/CSC472 -BC:/GitWorkspace/CSC472/build --check-stamp-file C:\GitWorkspace\CSC472\build\atlas\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/GitWorkspace/CSC472/atlas/CMakeLists.txt;C:\GitWorkspace\CSC472\atlas\CMakeLists.txt;C:\GitWorkspace\CSC472\atlas\config\Compiler.cmake;C:\GitWorkspace\CSC472\atlas\config\Externals.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeParseArguments.cmake;C:\GitWorkspace\CSC472\atlas\docs\Doxyfile.in;C:\GitWorkspace\CSC472\atlas\config\SourceGroups.cmake;C:\GitWorkspace\CSC472\atlas\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\GitWorkspace\CSC472\build\atlas\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/GitWorkspace/CSC472/atlas/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/GitWorkspace/CSC472 -BC:/GitWorkspace/CSC472/build --check-stamp-file C:\GitWorkspace\CSC472\build\atlas\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/GitWorkspace/CSC472/atlas/CMakeLists.txt;C:\GitWorkspace\CSC472\atlas\CMakeLists.txt;C:\GitWorkspace\CSC472\atlas\config\Compiler.cmake;C:\GitWorkspace\CSC472\atlas\config\Externals.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeParseArguments.cmake;C:\GitWorkspace\CSC472\atlas\docs\Doxyfile.in;C:\GitWorkspace\CSC472\atlas\config\SourceGroups.cmake;C:\GitWorkspace\CSC472\atlas\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\GitWorkspace\CSC472\build\atlas\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/GitWorkspace/CSC472/atlas/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/GitWorkspace/CSC472 -BC:/GitWorkspace/CSC472/build --check-stamp-file C:\GitWorkspace\CSC472\build\atlas\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/GitWorkspace/CSC472/atlas/CMakeLists.txt;C:\GitWorkspace\CSC472\atlas\CMakeLists.txt;C:\GitWorkspace\CSC472\atlas\config\Compiler.cmake;C:\GitWorkspace\CSC472\atlas\config\Externals.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeParseArguments.cmake;C:\GitWorkspace\CSC472\atlas\docs\Doxyfile.in;C:\GitWorkspace\CSC472\atlas\config\SourceGroups.cmake;C:\GitWorkspace\CSC472\atlas\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\GitWorkspace\CSC472\build\atlas\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\Atlas.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\core\Constants.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\core\Core.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\core\Float.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\core\GLFW.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\core\Log.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\core\Macros.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\core\Platform.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\core\Timer.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\core\TinyObjLoader.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\core\Exception.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\core\STB.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\core\ImGUI.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\core\Time.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\core\Enum.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\gl\ErrorCheck.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\gl\GL.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\gl\Shader.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\gl\Buffer.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\gl\VertexArrayObject.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\gl\Texture.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\gl\ShaderUnit.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\gl\Mesh.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\math\Math.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\math\RandomGenerator.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\math\Ray.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\math\Solvers.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\math\Coordinates.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\utils\Application.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\utils\Geometry.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\utils\Camera.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\utils\Scene.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\utils\Utils.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\utils\FPSCounter.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\utils\GUI.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\utils\WindowSettings.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\utils\BBox.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\utils\BVNode.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\utils\BVH.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\tools\Tools.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\tools\ModellingScene.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\tools\Grid.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\tools\MayaCamera.hpp" />
+    <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\core\Log.cpp"  />
+    <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\gl\ErrorCheck.cpp"  />
+    <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\gl\Shader.cpp"  />
+    <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\gl\Buffer.cpp"  />
+    <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\gl\VertexArrayObject.cpp"  />
+    <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\gl\Texture.cpp"  />
+    <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\gl\Mesh.cpp"  />
+    <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\utils\Application.cpp"  />
+    <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\utils\Camera.cpp"  />
+    <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\utils\Geometry.cpp"  />
+    <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\utils\Scene.cpp"  />
+    <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\utils\FPSCounter.cpp"  />
+    <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\utils\GUI.cpp"  />
+    <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\utils\BBox.cpp"  />
+    <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\tools\ModellingScene.cpp"  />
+    <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\tools\MayaCamera.cpp"  />
+    <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\tools\Grid.cpp"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/GitWorkspace/CSC472/build/ZERO_CHECK.vcxproj">
+      <Project>B4032E16-5DC4-3B50-8A46-F2800B8C6C4F</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/GitWorkspace/CSC472/build/atlas/external/gl3w/gl3w.vcxproj">
+      <Project>92650880-0C31-3E90-89CA-8EE173A4C03D</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/GitWorkspace/CSC472/build/atlas/external/glfw/src/glfw.vcxproj">
+      <Project>18C76B94-831A-3EB8-A402-9D1525235DF5</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/GitWorkspace/CSC472/build/atlas/external/imgui/imgui.vcxproj">
+      <Project>57A0E5DF-118B-3BF0-B040-40C03EE46218</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/GitWorkspace/CSC472/build/atlas/external/stb/stb.vcxproj">
+      <Project>F0704199-991C-3659-8C4A-19DE6C247F73</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/GitWorkspace/CSC472/build/atlas/external/tinyobjloader/tinyobjloader.vcxproj">
+      <Project>29868594-F4C7-3333-96B0-E5F97582E26B</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
