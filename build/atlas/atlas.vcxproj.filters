@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\source\atlas\core\Log.cpp">
+      <Filter>source\atlas\core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\source\atlas\gl\ErrorCheck.cpp">
+      <Filter>source\atlas\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\source\atlas\gl\Shader.cpp">
+      <Filter>source\atlas\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\source\atlas\gl\Buffer.cpp">
+      <Filter>source\atlas\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\source\atlas\gl\VertexArrayObject.cpp">
+      <Filter>source\atlas\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\source\atlas\gl\Texture.cpp">
+      <Filter>source\atlas\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\source\atlas\gl\Mesh.cpp">
+      <Filter>source\atlas\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\source\atlas\utils\Application.cpp">
+      <Filter>source\atlas\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\source\atlas\utils\Camera.cpp">
+      <Filter>source\atlas\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\source\atlas\utils\Geometry.cpp">
+      <Filter>source\atlas\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\source\atlas\utils\Scene.cpp">
+      <Filter>source\atlas\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\source\atlas\utils\FPSCounter.cpp">
+      <Filter>source\atlas\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\source\atlas\utils\GUI.cpp">
+      <Filter>source\atlas\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\source\atlas\utils\BBox.cpp">
+      <Filter>source\atlas\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\source\atlas\tools\ModellingScene.cpp">
+      <Filter>source\atlas\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\source\atlas\tools\MayaCamera.cpp">
+      <Filter>source\atlas\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\source\atlas\tools\Grid.cpp">
+      <Filter>source\atlas\tools</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\Atlas.hpp">
+      <Filter>include\atlas</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\core\Constants.hpp">
+      <Filter>include\atlas\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\core\Core.hpp">
+      <Filter>include\atlas\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\core\Float.hpp">
+      <Filter>include\atlas\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\core\GLFW.hpp">
+      <Filter>include\atlas\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\core\Log.hpp">
+      <Filter>include\atlas\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\core\Macros.hpp">
+      <Filter>include\atlas\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\core\Platform.hpp">
+      <Filter>include\atlas\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\core\Timer.hpp">
+      <Filter>include\atlas\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\core\TinyObjLoader.hpp">
+      <Filter>include\atlas\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\core\Exception.hpp">
+      <Filter>include\atlas\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\core\STB.hpp">
+      <Filter>include\atlas\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\core\ImGUI.hpp">
+      <Filter>include\atlas\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\core\Time.hpp">
+      <Filter>include\atlas\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\core\Enum.hpp">
+      <Filter>include\atlas\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\core\Numeric.hpp">
+      <Filter>include\atlas\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\gl\ErrorCheck.hpp">
+      <Filter>include\atlas\gl</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\gl\GL.hpp">
+      <Filter>include\atlas\gl</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\gl\Shader.hpp">
+      <Filter>include\atlas\gl</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\gl\Buffer.hpp">
+      <Filter>include\atlas\gl</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\gl\VertexArrayObject.hpp">
+      <Filter>include\atlas\gl</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\gl\Texture.hpp">
+      <Filter>include\atlas\gl</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\gl\ShaderUnit.hpp">
+      <Filter>include\atlas\gl</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\gl\Mesh.hpp">
+      <Filter>include\atlas\gl</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\math\Math.hpp">
+      <Filter>include\atlas\math</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\math\RandomGenerator.hpp">
+      <Filter>include\atlas\math</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\math\Ray.hpp">
+      <Filter>include\atlas\math</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\math\Solvers.hpp">
+      <Filter>include\atlas\math</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\math\Coordinates.hpp">
+      <Filter>include\atlas\math</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\utils\Application.hpp">
+      <Filter>include\atlas\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\utils\Geometry.hpp">
+      <Filter>include\atlas\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\utils\Camera.hpp">
+      <Filter>include\atlas\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\utils\Scene.hpp">
+      <Filter>include\atlas\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\utils\Utils.hpp">
+      <Filter>include\atlas\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\utils\FPSCounter.hpp">
+      <Filter>include\atlas\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\utils\GUI.hpp">
+      <Filter>include\atlas\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\utils\WindowSettings.hpp">
+      <Filter>include\atlas\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\utils\BBox.hpp">
+      <Filter>include\atlas\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\utils\BVNode.hpp">
+      <Filter>include\atlas\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\utils\BVH.hpp">
+      <Filter>include\atlas\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\tools\Tools.hpp">
+      <Filter>include\atlas\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\tools\ModellingScene.hpp">
+      <Filter>include\atlas\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\tools\Grid.hpp">
+      <Filter>include\atlas\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\include\atlas\tools\MayaCamera.hpp">
+      <Filter>include\atlas\tools</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="source\atlas\core">
+      <UniqueIdentifier>{289410B1-BBCB-38EE-90F0-87ED34B8D167}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\atlas\gl">
+      <UniqueIdentifier>{BB4162FE-8C1B-3611-B79A-9C576544C5D3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\atlas\utils">
+      <UniqueIdentifier>{7494076F-F263-375B-91B0-D8C7590C59F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\atlas\tools">
+      <UniqueIdentifier>{983533B3-7C8E-3C24-AC2F-BE8EAF612173}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\atlas">
+      <UniqueIdentifier>{1BE1EDBB-781D-36DA-BD54-9D3767646EBA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\atlas">
+      <UniqueIdentifier>{A9FD12A2-1317-358B-B2ED-25B9546B5C95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\atlas\core">
+      <UniqueIdentifier>{2257B049-A1C2-3631-90A0-A931C213CE74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\atlas\gl">
+      <UniqueIdentifier>{6AE6A1FE-5286-3B4A-95F9-AE4CAFA5F966}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\atlas\math">
+      <UniqueIdentifier>{04C76F56-C60D-3807-A5AE-C78457FDA6BE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\atlas\utils">
+      <UniqueIdentifier>{3E21DC90-467D-35F7-83C0-F7E06FA590A8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\atlas\tools">
+      <UniqueIdentifier>{B35973EC-2C62-3AFA-9452-89BE9E1FD16D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{A121AED8-6163-3B06-846B-5B029268E4BF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{B2394FA4-EA60-33B2-AC3F-9A1CE32D65B8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

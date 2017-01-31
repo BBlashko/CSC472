@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\external\glfw\tests\windows.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\external\glfw\deps\getopt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\external\glfw\deps\glad.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\external\glfw\deps\getopt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\external\glfw\deps\glad\glad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\lynx\GitWorkspace\CSC472\atlas\external\glfw\tests\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{146F1287-1B74-3271-A07A-224D7AC255EA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{53BC23EB-F726-3BE8-972B-FB8E771103C2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

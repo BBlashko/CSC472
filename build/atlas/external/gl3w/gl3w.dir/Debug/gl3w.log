@@ -1,0 +1,4 @@
+﻿  Building Custom Rule C:/Users/lynx/GitWorkspace/CSC472/atlas/external/gl3w/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\lynx\GitWorkspace\CSC472\build\atlas\external\gl3w\CMakeFiles\generate.stamp is up-to-date.
+  gl3w.c
+  gl3w.vcxproj -> C:\Users\lynx\GitWorkspace\CSC472\build\atlas\external\gl3w\Debug\gl3w.lib

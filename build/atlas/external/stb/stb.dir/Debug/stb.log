@@ -1,0 +1,4 @@
+﻿  Building Custom Rule C:/Users/lynx/GitWorkspace/CSC472/atlas/external/stb/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\lynx\GitWorkspace\CSC472\build\atlas\external\stb\CMakeFiles\generate.stamp is up-to-date.
+  stb_image.cpp
+  stb.vcxproj -> C:\Users\lynx\GitWorkspace\CSC472\build\atlas\external\stb\Debug\stb.lib
