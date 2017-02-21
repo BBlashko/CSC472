@@ -5,8 +5,18 @@
 
 namespace assignment2
 {
+
+    using  Vector3 = atlas::math::Vector;
+
     PolygonizationScene::PolygonizationScene()
     {
+        mSceneSpheres.push_back(Sphere(Vector3(), 2.0f));
+        RunMarchingCubes();
+    }
+
+    void RunMarchingCubes() 
+    {
+        
     }
 
     void PolygonizationScene::renderScene()
@@ -34,6 +44,14 @@ namespace assignment2
         {
             mGrid.renderGeometry();
         }
+
+        for (int i = 0; i < mSceneSpheres.size(); i++)
+        {
+            mSceneSpheres.at(i).renderGeometry();
+        }
+
+
+
 
         ImGui::SetNextWindowSize(ImVec2(400, 200), ImGuiSetCond_FirstUseEver);
         ImGui::Begin("Polygonization HUD");

@@ -6,19 +6,16 @@
 
 namespace assignment2
 {
-    struct RayResult
-    {
-        double t;
-        //Vector3 normal;
-        Color color;
-    };
-
-    class Object
+    class Object : public atlas::utils::Geometry
     {
     public:
         Object() {};
 
-        virtual void function() const = 0;
+        void Object::renderGeometry() override;
+
+    private:
+        atlas::gl::VertexArrayObject mVao;
+        atlas::gl::Buffer mBuffer;
     };
 }
 

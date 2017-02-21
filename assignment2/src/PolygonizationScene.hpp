@@ -5,6 +5,7 @@
 #include <atlas/utils/GUI.hpp>
 #include <GL/GL.h>
 #include <vector>
+#include "Sphere.hpp"
 #include <iostream>
 
 namespace assignment2
@@ -13,11 +14,13 @@ namespace assignment2
     {
         using Vector3 = atlas::math::Vector;
 
-    public:
-        PolygonizationScene::PolygonizationScene();
+        public:
+            PolygonizationScene::PolygonizationScene();
 
-        void PolygonizationScene::renderScene() override;
+            void PolygonizationScene::renderScene() override;
 
-    private:
+        private:
+            std::vector<Sphere> mSceneSpheres;
+
     };
 }

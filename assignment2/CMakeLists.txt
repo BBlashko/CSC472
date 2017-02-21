@@ -14,6 +14,8 @@ add_executable(assignment2 src/main.cpp
 						   src/Polygonize.hpp
 						   src/Polygonize.cpp
 						   src/Sphere.hpp
-						   src/Sphere.cpp)
+						   src/Sphere.cpp
+						   src/MarchingCubes.cpp
+						   src/MarchingCubes.hpp)
 target_link_libraries(assignment2 ${ATLAS_LIBRARIES})
 

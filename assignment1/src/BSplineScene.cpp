@@ -1,30 +1,35 @@
 #include "BSplineScene.h"
+#include <atlas\utils\Application.hpp>
 
 namespace assignment1
 {
     BSplineScene::BSplineScene()
     {
-
     }
 
     void BSplineScene::mousePressEvent(int button, int action, int modifiers, double xPos, double yPos)
     {
         atlas::utils::Gui::getInstance().mousePressed(button, action, modifiers);
-
-        if (action == GLFW_PRESS)
+        if (action == GLFW_PRESS && !ImGui::IsAnyItemHovered())
         {
-            atlas::math::Point2 point(xPos, yPos);
-            addCirclePoint(assignment1::Circle(xPos, yPos, 120, 36));
+            if (bSpline.intersectsControlPoint(xPos, yPos, 0.1))
+            {
+                while (action == GLFW_PRESS)
+                {
+                    
+                }
+            }
+            else
+            {
+                double currWidth = (double)(mWidth / 2);
+                double currHeight = (double)(mHeight / 2);
+                bSpline.addControlPoint((xPos - currWidth) / currWidth, -((yPos - currHeight) / currHeight));
+            }
         }
         else
         {
             mCamera.mouseUp();
         }
-    }
-
-    void BSplineScene::updateScene(double time)
-    {
-
     }
 
     void BSplineScene::renderScene()
@@ -36,36 +41,56 @@ namespace assignment1
         glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        mProjection = glm::perspective(
-            glm::radians(mCamera.getCameraFOV()),
-            (float)mWidth / mHeight, 1.0f, 1000000.0f);
-
-        mUniformMatrixBuffer.bindBuffer();
-        mUniformMatrixBuffer.bufferSubData(0, sizeof(atlas::math::Matrix4),
-            &mProjection[0][0]);
-        mUniformMatrixBuffer.unBindBuffer();
-
-        mView = mCamera.getCameraMatrix();
-        mUniformMatrixBuffer.bindBuffer();
-        mUniformMatrixBuffer.bufferSubData(sizeof(atlas::math::Matrix4),
-            sizeof(atlas::math::Matrix4), &mView[0][0]);
 
         static char degreeChar[1] = { '0' };
 
-        //Draw Circles
-        for (std::vector<assignment1::Circle>::size_type i = 0; i != circlePoints.size(); i++) {
-            assignment1::Circle &circle = circlePoints.at(i);
-            circle.renderGeometry();
-        }
-
-        //static char degreeChar[1] = { '0' };
-        //ImGui::InputText("Order", degreeChar, 1);
+        //RenderBSplines
+        bSpline.renderGeometry();
 
         ImGui::SetNextWindowSize(ImVec2(400, 200), ImGuiSetCond_FirstUseEver);
         ImGui::Begin("BSpline HUD");
+        static int order = bSpline.getDegree() + 1;
+        static int numPoints = 0;
 
-        static int vec4i[4] = { 1, 10 };
-        ImGui::SliderInt("Degree", vec4i, 1, 10);
+        int currNum = bSpline.getNumberOfControlPoints();
+
+        //GUI Order option
+        ImGui::InputInt("Order:", &order);
+        if (order != bSpline.getDegree() + 1)
+        {
+            if (order > 6)
+            {
+                order = 6;
+            }
+            else if (order < 1)
+            {
+                order = 1;
+            }
+            else
+            {
+                bSpline.setOrderAndDegree(order - 1);
+                bSpline.updateSpline();
+            }
+
+        }
+
+        //GUI Number of Control Points Option
+        int currPoint = bSpline.getNumberOfControlPoints();
+        if (numPoints != currPoint)
+        {
+            numPoints = currPoint;
+        }
+        ImGui::InputInt("Number of Control Points:", &numPoints);
+        if (numPoints < 0)
+        {
+            numPoints = 0;
+        }
+        else if (currNum > numPoints)
+        {
+            numPoints -= 1;
+            bSpline.removeControlPoint();
+        }
+        
         ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f /
             ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
         ImGui::End();
