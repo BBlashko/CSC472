@@ -20,7 +20,7 @@ namespace assignment2
             void PolygonizationScene::renderScene() override;
 
         private:
-            std::vector<Sphere> mSceneSpheres;
+            std::vector<Sphere*> mSceneSpheres;
 
     };
 }

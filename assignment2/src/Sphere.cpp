@@ -2,15 +2,24 @@
 
 namespace assignment2
 {
-    Sphere::Sphere(Vector3 position, float radius) : 
-        mRadius(radius),
-        mPosition(position)
-    { }
-
-    float Sphere::function()
+    /*float Sphere::function()
     {
         return mPosition.x * mPosition.x + mPosition.y * mPosition.y + mPosition.z * mPosition.z - mRadius * mRadius;
+    }*/
+
+    /*void Sphere::isoLevel(Vector3)*/
+
+    int Sphere::contains(Vector3 vertex)
+    {
+        float distance = glm::distance(vertex, mPosition);
+
+        if (distance < mRadius)
+        {
+            return 0;
+        }
+        return 1;
     }
+
     void Sphere::renderGeometry()
     {
     }

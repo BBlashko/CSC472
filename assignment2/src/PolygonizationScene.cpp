@@ -1,5 +1,7 @@
 #include "PolygonizationScene.hpp"
-
+#include "MarchingCubes.hpp"
+#include "Sphere.hpp"
+#include <vector>
 #include <atlas/gl/GL.hpp>
 #include <atlas/utils/GUI.hpp>
 
@@ -10,13 +12,8 @@ namespace assignment2
 
     PolygonizationScene::PolygonizationScene()
     {
-        mSceneSpheres.push_back(Sphere(Vector3(), 2.0f));
-        RunMarchingCubes();
-    }
-
-    void RunMarchingCubes() 
-    {
-        
+        mSceneSpheres.push_back(new Sphere(2.0f));
+        MarchingCubes::MarchingCubes(mSceneSpheres);
     }
 
     void PolygonizationScene::renderScene()
@@ -47,7 +44,7 @@ namespace assignment2
 
         for (int i = 0; i < mSceneSpheres.size(); i++)
         {
-            mSceneSpheres.at(i).renderGeometry();
+            mSceneSpheres.at(i)->renderGeometry();
         }
 
 

@@ -5,6 +5,7 @@
 #include <atlas\utils\Utils.hpp>
 #include <atlas\utils\WindowSettings.hpp>
 #include <atlas\tools\ModellingScene.hpp>
+#include "PolygonizationScene.hpp"
 
 // Configure the settings we need to create an openGL context
 atlas::utils::WindowSettings config_window_settings() {
@@ -25,7 +26,7 @@ int main(void) {
 
     //Create window
     atlas::utils::Application::getInstance().createWindow(window_settings);
-    atlas::utils::Application::getInstance().addScene(atlas::utils::ScenePointer(new atlas::tools::ModellingScene()));
+    atlas::utils::Application::getInstance().addScene(atlas::utils::ScenePointer(new assignment2::PolygonizationScene()));
     atlas::utils::Application::getInstance().runApplication();
 
     return 0;
