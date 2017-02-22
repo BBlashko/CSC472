@@ -4,14 +4,12 @@
 #include <vector>
 
 #define ISO_VALUE	    0.5f
-#define MAX_FIELD_VALUE 1.0f
-#define MIN_FIELD_VALUE 0.0f
-#define VOXEL_SIZE 1.0f
+#define VOXEL_SIZE      0.1f
 
 namespace assignment2
 {
     using Vector3 = atlas::math::Vector;
-    using Vector2 = atlas::math::Vector2;
+    using Normal = atlas::math::Normal;
 
     struct Voxel
     {
@@ -30,15 +28,20 @@ namespace assignment2
 
     class MarchingCubes
     {
-        using Vector3 = atlas::math::Vector;
+        using Vector3 = atlas::math::Point;
 
         public:
-            MarchingCubes::MarchingCubes(std::vector<Sphere*> &SceneSpheres);
+            MarchingCubes::MarchingCubes() {};
+            MarchingCubes::MarchingCubes(std::vector<Sphere*>& sceneSpheres)
+            {
+                mSceneSpheres = sceneSpheres;
+            }
+
             int MarchingCubes::generateGrid();
-            void MarchingCubes::createMesh();
-            void MarchingCubes::polygonizeVoxel(Voxel cubeContainer, std::vector<Vector3> &Vertices, double isoLevel);
+            void MarchingCubes::createMesh(std::vector<Sphere*>& sceneSpheres, std::vector<Vector3> & vertices, std::vector<Normal> &normals);
+            void MarchingCubes::polygonizeVoxel(Voxel cubeContainer, std::vector<Vector3> &Vertices, std::vector<Normal> &normals, float isoLevel);
             void MarchingCubes::calculateVertexValues(float *vertexArray, int y);
-            void MarchingCubes::calculateVoxels(float * bottomVertexArray, float * topVertexArray, int y, std::vector<Vector3> & vertices);
+            void MarchingCubes::calculateVoxels(float *bottomVertexArray, float *topVertexArray, int y, std::vector<Vector3> & vertices, std::vector<Normal> &normals);
 
         private:
             
@@ -46,6 +49,6 @@ namespace assignment2
 
             std::vector<Voxel> mSceneVoxels;
             Grid mSceneGrid;
-            std::vector<Sphere*>& mSceneSpheres;
+            std::vector<Sphere*> mSceneSpheres;
     };
 }

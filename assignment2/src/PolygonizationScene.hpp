@@ -6,13 +6,15 @@
 #include <GL/GL.h>
 #include <vector>
 #include "Sphere.hpp"
+#include "Mesh.hpp"
 #include <iostream>
 
 namespace assignment2
 {
     class PolygonizationScene : public atlas::tools::ModellingScene
     {
-        using Vector3 = atlas::math::Vector;
+        using Vector3 = atlas::math::Point;
+        using AtlasMesh = atlas::utils::Mesh;
 
         public:
             PolygonizationScene::PolygonizationScene();
@@ -20,7 +22,6 @@ namespace assignment2
             void PolygonizationScene::renderScene() override;
 
         private:
-            std::vector<Sphere*> mSceneSpheres;
-
+            Mesh mSceneMesh;
     };
 }

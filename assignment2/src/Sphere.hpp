@@ -9,7 +9,7 @@ namespace assignment2
 {
     class Sphere : public atlas::utils::Geometry
     {
-        using Vector3 = atlas::math::Vector;
+        using Vector3 = atlas::math::Point;
 
         public:
             Sphere::Sphere() :
@@ -28,9 +28,32 @@ namespace assignment2
                 mPosition(position),
                 mRadius(radius) {};
 
+            Sphere::Sphere(Sphere&& sphere)
+            {
+                mRadius = sphere.mRadius;
+                mPosition = sphere.mPosition;
+            };
+
+            Sphere::Sphere(const Sphere& sphere)
+            {
+                mRadius = sphere.mRadius;
+                mPosition = sphere.mPosition;
+            };
+
             ~Sphere() {};
 
-            int Sphere::contains(Vector3 vertex);
+            Sphere& operator=(const Sphere sphere)
+            {
+                if (this != &sphere)
+                {
+                    mRadius = sphere.mRadius;
+                    mPosition = sphere.mPosition;
+                }
+                return *this;
+            };
+
+
+            float Sphere::contains(Vector3 vertex);
             void renderGeometry() override;
 
             const float& x() const { return mPosition.x; };

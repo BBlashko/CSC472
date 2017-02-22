@@ -7,13 +7,13 @@
 
 namespace assignment2
 {
-
     using  Vector3 = atlas::math::Vector;
 
     PolygonizationScene::PolygonizationScene()
     {
-        mSceneSpheres.push_back(new Sphere(2.0f));
-        MarchingCubes::MarchingCubes(mSceneSpheres);
+        mSceneMesh.addSceneSphere(new Sphere(Vector3(-3.0f, 0, 0), 2.0f));
+        mSceneMesh.addSceneSphere(new Sphere(2.2f));
+        mSceneMesh.createMesh();
     }
 
     void PolygonizationScene::renderScene()
@@ -39,16 +39,10 @@ namespace assignment2
 
         if (mShowGrid)
         {
-            mGrid.renderGeometry();
+            mGrid.renderGeometry(mProjection, mView);
         }
 
-        for (int i = 0; i < mSceneSpheres.size(); i++)
-        {
-            mSceneSpheres.at(i)->renderGeometry();
-        }
-
-
-
+        mSceneMesh.renderGeometry(mProjection, mView);
 
         ImGui::SetNextWindowSize(ImVec2(400, 200), ImGuiSetCond_FirstUseEver);
         ImGui::Begin("Polygonization HUD");
@@ -57,6 +51,13 @@ namespace assignment2
         {
             mCamera.resetCamera();
         }
+
+        static int e = 0;
+        ImGui::Text("Rendering Type:");
+        ImGui::RadioButton("Atlas Mesh", &e, 0);
+        ImGui::RadioButton("Lines", &e, 1);
+        ImGui::RadioButton("Points", &e, 2);
+        mSceneMesh.setRenderType(e);
 
         ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f /
             ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);

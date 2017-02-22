@@ -1,4 +1,4 @@
-# CSC472 - Assignment #1
+# CSC472 - Assignment #2
 Brett A. Blashko
 V00759982
 

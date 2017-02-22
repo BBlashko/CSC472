@@ -67,8 +67,8 @@ void main()
 		{
 			glDrawArrays(GL_LINE_STRIP, 0, _positions.size());
 		}
-		
-		glPointSize(10.0f);
+
+		glPointSize(5.0f);
 		glDrawArrays(GL_POINTS, 0, _positions.size());
 
 		mVao.unBindVertexArray();

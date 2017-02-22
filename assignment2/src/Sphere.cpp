@@ -1,19 +1,13 @@
 #include "Sphere.hpp"
+#include <iostream>
 
 namespace assignment2
 {
-    /*float Sphere::function()
-    {
-        return mPosition.x * mPosition.x + mPosition.y * mPosition.y + mPosition.z * mPosition.z - mRadius * mRadius;
-    }*/
-
-    /*void Sphere::isoLevel(Vector3)*/
-
-    int Sphere::contains(Vector3 vertex)
+    float Sphere::contains(Vector3 vertex)
     {
         float distance = glm::distance(vertex, mPosition);
 
-        if (distance < mRadius)
+        if (distance <= mRadius)
         {
             return 0;
         }

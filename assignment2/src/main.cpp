@@ -11,7 +11,7 @@
 atlas::utils::WindowSettings config_window_settings() {
     auto window_settings = atlas::utils::WindowSettings();
     window_settings.title = "Assignment 2";
-    window_settings.contextVersion = std::tuple<int, int>(4, 4);
+    window_settings.contextVersion = std::tuple<int, int>(3, 3);
     window_settings.isMaximized = true;
     window_settings.windowSize = std::tuple<int, int>(400, 400);
 
