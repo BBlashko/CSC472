@@ -19,9 +19,6 @@
     <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\gl\Texture.cpp">
       <Filter>source\atlas\gl</Filter>
     </ClCompile>
-    <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\gl\Mesh.cpp">
-      <Filter>source\atlas\gl</Filter>
-    </ClCompile>
     <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\utils\Application.cpp">
       <Filter>source\atlas\utils</Filter>
     </ClCompile>
@@ -41,6 +38,9 @@
       <Filter>source\atlas\utils</Filter>
     </ClCompile>
     <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\utils\BBox.cpp">
+      <Filter>source\atlas\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\utils\Mesh.cpp">
       <Filter>source\atlas\utils</Filter>
     </ClCompile>
     <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\tools\ModellingScene.cpp">
@@ -99,6 +99,9 @@
     <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\core\Enum.hpp">
       <Filter>include\atlas\core</Filter>
     </ClInclude>
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\core\Numeric.hpp">
+      <Filter>include\atlas\core</Filter>
+    </ClInclude>
     <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\gl\ErrorCheck.hpp">
       <Filter>include\atlas\gl</Filter>
     </ClInclude>
@@ -118,9 +121,6 @@
       <Filter>include\atlas\gl</Filter>
     </ClInclude>
     <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\gl\ShaderUnit.hpp">
-      <Filter>include\atlas\gl</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\gl\Mesh.hpp">
       <Filter>include\atlas\gl</Filter>
     </ClInclude>
     <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\math\Math.hpp">
@@ -171,6 +171,9 @@
     <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\utils\BVH.hpp">
       <Filter>include\atlas\utils</Filter>
     </ClInclude>
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\utils\Mesh.hpp">
+      <Filter>include\atlas\utils</Filter>
+    </ClInclude>
     <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\tools\Tools.hpp">
       <Filter>include\atlas\tools</Filter>
     </ClInclude>
@@ -188,21 +191,6 @@
     <CustomBuild Include="C:\GitWorkspace\CSC472\atlas\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="include\atlas\core">
-      <UniqueIdentifier>{7974A62D-2AAE-39BB-BC37-FE170B3A2A85}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="include\atlas\gl">
-      <UniqueIdentifier>{084550B4-A33B-3A21-9B67-2C90EB3FC916}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="include\atlas\math">
-      <UniqueIdentifier>{0E4B55CE-BA6B-333F-B155-1CC6EB313819}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="include\atlas\utils">
-      <UniqueIdentifier>{E7B70FB0-213C-3815-8DC4-D1969772BE02}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="include\atlas\tools">
-      <UniqueIdentifier>{7B82173D-5DB7-3E32-BAEA-35900DD6A9AC}</UniqueIdentifier>
-    </Filter>
     <Filter Include="include\atlas">
       <UniqueIdentifier>{F869319C-96FF-3FB0-B0BA-D89B2F09EF76}</UniqueIdentifier>
     </Filter>
@@ -226,6 +214,21 @@
     </Filter>
     <Filter Include="source">
       <UniqueIdentifier>{E4A804DE-7E05-38EF-BE5A-078CBF10FE5A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\atlas\core">
+      <UniqueIdentifier>{7974A62D-2AAE-39BB-BC37-FE170B3A2A85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\atlas\gl">
+      <UniqueIdentifier>{084550B4-A33B-3A21-9B67-2C90EB3FC916}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\atlas\math">
+      <UniqueIdentifier>{0E4B55CE-BA6B-333F-B155-1CC6EB313819}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\atlas\utils">
+      <UniqueIdentifier>{E7B70FB0-213C-3815-8DC4-D1969772BE02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\atlas\tools">
+      <UniqueIdentifier>{7B82173D-5DB7-3E32-BAEA-35900DD6A9AC}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

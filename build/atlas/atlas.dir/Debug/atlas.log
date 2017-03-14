@@ -8,7 +8,6 @@ c:\gitworkspace\csc472\atlas\source\atlas\gl\shader.cpp(502): warning C4018: '<'
   Buffer.cpp
   VertexArrayObject.cpp
   Texture.cpp
-  Mesh.cpp
   Application.cpp
   Camera.cpp
   Geometry.cpp
@@ -16,6 +15,7 @@ c:\gitworkspace\csc472\atlas\source\atlas\gl\shader.cpp(502): warning C4018: '<'
   FPSCounter.cpp
   GUI.cpp
   BBox.cpp
+  Mesh.cpp
   ModellingScene.cpp
   MayaCamera.cpp
   Grid.cpp

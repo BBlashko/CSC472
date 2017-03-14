@@ -280,6 +280,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\core\ImGUI.hpp" />
     <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\core\Time.hpp" />
     <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\core\Enum.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\core\Numeric.hpp" />
     <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\gl\ErrorCheck.hpp" />
     <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\gl\GL.hpp" />
     <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\gl\Shader.hpp" />
@@ -287,7 +288,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\gl\VertexArrayObject.hpp" />
     <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\gl\Texture.hpp" />
     <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\gl\ShaderUnit.hpp" />
-    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\gl\Mesh.hpp" />
     <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\math\Math.hpp" />
     <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\math\RandomGenerator.hpp" />
     <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\math\Ray.hpp" />
@@ -304,6 +304,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\utils\BBox.hpp" />
     <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\utils\BVNode.hpp" />
     <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\utils\BVH.hpp" />
+    <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\utils\Mesh.hpp" />
     <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\tools\Tools.hpp" />
     <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\tools\ModellingScene.hpp" />
     <ClInclude Include="C:\GitWorkspace\CSC472\atlas\include\atlas\tools\Grid.hpp" />
@@ -314,7 +315,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\gl\Buffer.cpp"  />
     <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\gl\VertexArrayObject.cpp"  />
     <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\gl\Texture.cpp"  />
-    <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\gl\Mesh.cpp"  />
     <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\utils\Application.cpp"  />
     <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\utils\Camera.cpp"  />
     <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\utils\Geometry.cpp"  />
@@ -322,6 +322,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\utils\FPSCounter.cpp"  />
     <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\utils\GUI.cpp"  />
     <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\utils\BBox.cpp"  />
+    <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\utils\Mesh.cpp"  />
     <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\tools\ModellingScene.cpp"  />
     <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\tools\MayaCamera.cpp"  />
     <ClCompile Include="C:\GitWorkspace\CSC472\atlas\source\atlas\tools\Grid.cpp"  />

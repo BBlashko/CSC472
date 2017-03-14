@@ -165,8 +165,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="C:/GitWorkspace/CSC472/build/ZERO_CHECK.vcxproj">
       <Project>B4032E16-5DC4-3B50-8A46-F2800B8C6C4F</Project>
     </ProjectReference>
-    <ProjectReference Include="C:/GitWorkspace/CSC472/build/assignment1/assignment1.vcxproj">
-      <Project>C15291F9-C8CD-3FB2-AA68-8E8C9F175F2F</Project>
+    <ProjectReference Include="C:/GitWorkspace/CSC472/build/assignment3/assignment3.vcxproj">
+      <Project>0037C790-2CC0-3BBC-8D6A-0F030F1B43BE</Project>
     </ProjectReference>
     <ProjectReference Include="C:/GitWorkspace/CSC472/build/atlas/atlas.vcxproj">
       <Project>0AD912FA-5A1A-383C-B259-041D03E2F56B</Project>

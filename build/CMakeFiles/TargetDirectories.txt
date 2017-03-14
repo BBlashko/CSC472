@@ -59,5 +59,5 @@ C:/GitWorkspace/CSC472/build/atlas/source/atlas/core/CMakeFiles/INSTALL.dir
 C:/GitWorkspace/CSC472/build/atlas/source/atlas/gl/CMakeFiles/INSTALL.dir
 C:/GitWorkspace/CSC472/build/atlas/source/atlas/utils/CMakeFiles/INSTALL.dir
 C:/GitWorkspace/CSC472/build/atlas/source/atlas/tools/CMakeFiles/INSTALL.dir
-C:/GitWorkspace/CSC472/build/assignment1/CMakeFiles/assignment1.dir
-C:/GitWorkspace/CSC472/build/assignment1/CMakeFiles/INSTALL.dir
+C:/GitWorkspace/CSC472/build/assignment3/CMakeFiles/assignment3.dir
+C:/GitWorkspace/CSC472/build/assignment3/CMakeFiles/INSTALL.dir

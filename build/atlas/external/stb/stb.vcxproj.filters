@@ -14,11 +14,11 @@
     <CustomBuild Include="C:\GitWorkspace\CSC472\atlas\external\stb\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="include\stb">
-      <UniqueIdentifier>{B21B7A59-4538-322D-814C-A149AF9098BA}</UniqueIdentifier>
-    </Filter>
     <Filter Include="source\stb">
       <UniqueIdentifier>{14AA42DF-A5D4-36AF-9EC3-BB530A0FD662}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\stb">
+      <UniqueIdentifier>{B21B7A59-4538-322D-814C-A149AF9098BA}</UniqueIdentifier>
     </Filter>
     <Filter Include="include">
       <UniqueIdentifier>{CF316DEE-38C9-32D0-84A1-666408D20A63}</UniqueIdentifier>

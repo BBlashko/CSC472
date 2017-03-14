@@ -23,11 +23,11 @@
     <CustomBuild Include="C:\GitWorkspace\CSC472\atlas\external\imgui\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="source\imgui">
-      <UniqueIdentifier>{81D7FDD3-BB20-3989-92EE-F1000BAB5CDE}</UniqueIdentifier>
-    </Filter>
     <Filter Include="include\imgui">
       <UniqueIdentifier>{6ED543EB-B12C-3ECB-A593-EA39C085B0CD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\imgui">
+      <UniqueIdentifier>{81D7FDD3-BB20-3989-92EE-F1000BAB5CDE}</UniqueIdentifier>
     </Filter>
     <Filter Include="include">
       <UniqueIdentifier>{CF316DEE-38C9-32D0-84A1-666408D20A63}</UniqueIdentifier>
