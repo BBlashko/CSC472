@@ -1,18 +1,24 @@
 #pragma once
 
-#include "atlas/tools/Tools.hpp"
-#include "atlas/utils/Geometry.hpp"
-#include "atlas/gl/VertexArrayObject.hpp"
-#include "atlas/gl/Buffer.hpp"
+#include <atlas/gl/GL.hpp>
+#include <atlas/utils/GUI.hpp>
+#include <atlas/tools/Tools.hpp>
+#include <atlas/utils/Geometry.hpp>
+#include <atlas/gl/VertexArrayObject.hpp>
+#include <atlas/gl/Buffer.hpp>
+#include <atlas/gl/ShaderUnit.hpp>
 #include <vector>
+#include <iostream>
 #include <stack>
+#include <math.h>
+#include "TurtleValue.hpp"
 
 namespace assignment3
 {
     class PythagorasTree : public atlas::utils::Geometry
     {
         using Point = atlas::math::Point;
-        using Stack = std::stack<Point, int>;
+        using Stack = std::stack<TurtleValue>;
     public:
 
         PythagorasTree::PythagorasTree(std::string axiom);

@@ -1,30 +1,11 @@
 #include "PythagorasTree.hpp"
-#include <atlas/gl/GL.hpp>
-#include "atlas/gl/Shader.hpp"
-#include <atlas/utils/GUI.hpp>
-#include <iostream>
-#include <stack>
 
-#define BRANCH_LENGTH 0.1f
-#define LEAF_LENGTH 0.05f
+#define PI 3.14159265358979323846
+#define BRANCH_LENGTH 0.025f
+#define LEAF_LENGTH 0.0125f
 
 namespace assignment3
 {
-    constexpr auto gridVs =
-        R"(#version 430 core
-
-        layout (location = 0) in vec3 vPosition;
-
-        uniform mat4 projection;
-uniform mat4 view;
-uniform mat4 model;
-
-void main()
-{
-    gl_Position = projection * view * model * vec4(vPosition, 1.0);
-}
-)";
-
     constexpr auto gridFS =
         R"(#version 430 core
 
@@ -40,9 +21,10 @@ void main()
 
     PythagorasTree::PythagorasTree(std::string axiom) : _Buffer(GL_ARRAY_BUFFER), _lAxiom(axiom) {
 
+        generateLSystem(0);
+
         std::vector<atlas::gl::ShaderUnit> shaders
         {
-            { gridVs, GL_VERTEX_SHADER, true },
             { gridFS, GL_FRAGMENT_SHADER, true }
         };
 
@@ -50,8 +32,23 @@ void main()
         mShaders[0].compileShaders();
         mShaders[0].linkShaders();
 
+        _Vao.bindVertexArray();
+
+        _Buffer.bindBuffer();
+
+        _Buffer.bufferData(atlas::gl::size<atlas::math::Point>(_Vertices.size()),
+            _Vertices.data(), GL_DYNAMIC_DRAW);
+        _Buffer.vertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0,
+            atlas::gl::bufferOffset<float>(0));
+
+
+        _Vao.enableVertexAttribArray(0);
+
         auto var = mShaders[0].getUniformVariable("colour");
         mUniforms.insert(UniformKey("colour", var));
+
+        _Buffer.unBindBuffer();
+        _Vao.unBindVertexArray();
         mShaders[0].disableShaders();
     };
 
@@ -67,7 +64,7 @@ void main()
         _Vao.bindVertexArray();
 
         glUniform4f(mUniforms["colour"],  0, 0, 0, 1);
-        glDrawArrays(GL_LINES, 0, (int) _NumIndices);
+        glDrawArrays(GL_LINES, 0, (int) _Vertices.size());
 
         _Vao.unBindVertexArray();
         mShaders[0].disableShaders();
@@ -103,36 +100,63 @@ void main()
 
     void PythagorasTree::generateLSystem(int recursionLevel)
     {
-        _lSystem = _lAxiom;
+        std::cout << "Generating pythagoras tree structure for a recursion level of: " << recursionLevel << std::endl;
+        _lSystem = _lAxiom;        
         recurse(_lSystem, recursionLevel);
+        _Vertices.clear();
 
         Stack turtleStack;
-        Point current_point = Point(0.0f, 0.0f, 0.0f);
-        Point next_point;
-        int angle = 0;
+        Point current_point = Point(0.0f, -0.8f, 0.0f);
+        Point previous_point;
+        float angle = 0;
 
-        _Vertices.push_back(current_point);
         for (int i = 0; i < _lSystem.length(); i++)
         {
-            next_point = current_point;
-            switch (_lSystem.at(i))
+            char curr = _lSystem.at(i);
+            previous_point = current_point;
+            float x = 0.0f;
+            float y = 0.0f;
+
+            if (curr == '0')
             {
-            case '0':
-                next_point.y += LEAF_LENGTH;
-                break;
-            case '1':
-                next_point.y += BRANCH_LENGTH;
-                break;
-            case '[':
-                angle += 45;
-                turtleStack.push(next_point, angle);
-                
-                break;
-            case ']':
-                break;
-            default:
-                break;
+                x = sin(2 * PI * (angle / 360)) * LEAF_LENGTH;
+                y = cos(2 * PI * (angle / 360)) * LEAF_LENGTH;
+                current_point.x += x;
+                current_point.y += y;
+                _Vertices.push_back(previous_point);
+                _Vertices.push_back(current_point);
+            }
+            else if (curr == '1')
+            {
+                x = sin(2 * PI * (angle / 360)) * BRANCH_LENGTH;
+                y = cos(2 * PI * (angle / 360)) * BRANCH_LENGTH;
+                current_point.x += x;
+                current_point.y += y;
+                _Vertices.push_back(previous_point);
+                _Vertices.push_back(current_point);
+            }
+            else if (curr == '[')
+            {
+                turtleStack.push(TurtleValue(current_point, angle));
+                angle -= 45.0f;
+            }
+            else if (curr == ']')
+            {
+                if (turtleStack.size() == 0)
+                    break;
+
+                TurtleValue value(turtleStack.top());
+                angle = value.angle() + 45;
+                current_point = value.position();
+                turtleStack.pop();
             }
         }
+
+        _Buffer.bindBuffer();
+
+        _Buffer.bufferData(atlas::gl::size<atlas::math::Point>(_Vertices.size()),
+            _Vertices.data(), GL_DYNAMIC_DRAW);
+
+        _Buffer.unBindBuffer();
     }
 }

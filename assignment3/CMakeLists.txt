@@ -8,5 +8,6 @@ add_executable(assignment3 src/main.cpp
 							src/LSystemScene.cpp
 							src/LSystemScene.hpp
 							src/PythagorasTree.cpp
-							src/PythagorasTree.hpp)
+							src/PythagorasTree.hpp
+							src/TurtleValue.hpp)
 target_link_libraries(assignment3 ${ATLAS_LIBRARIES})
