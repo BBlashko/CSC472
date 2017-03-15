@@ -85,9 +85,51 @@ namespace assignment3
 
             if (c == '0')
             {
-                system.erase(i, 1);
-                system.insert(i, "1[0]0");
-                i += 5;
+                if (_randomLanguage)
+                {
+                    float diff = 10 - 0;
+                    int random = 0 + (diff * rand()) / (RAND_MAX + 1.0f);
+                    std::cout << "random = " << random << std::endl;
+                    if (random < 2)
+                    {
+                        system.erase(i, 1);
+                        system.insert(i, "1[0]0");
+                        i += 5;
+                    }
+                    else if (random < 4)
+                    {
+                        system.erase(i, 1);
+                        system.insert(i, "1[0][0]");
+                        i += 7;
+                    }
+                    else if (random < 6)
+                    {
+                        system.erase(i, 1);
+                        system.insert(i, "1[0]");
+                        i += 4;
+                    }
+                    else if (random < 10)
+                    {
+                        system.erase(i, 1);
+
+                        system.insert(i, "1");
+                        i += 1;
+                        for (int j = 0; j < (10 - random); j++)
+                        {
+                            system.insert(i, "[0]");
+                            i += 3;
+                        }
+                        i += 1;
+                        
+                    }
+
+                }
+                else
+                {
+                    system.erase(i, 1);
+                    system.insert(i, "1[0]0");
+                    i += 5;
+                }
             }
             else if (c == '1')
             {
@@ -111,37 +153,29 @@ namespace assignment3
         Point previous_point;
       
 
-        float angle = 0;
-        
-        if (stochastic)
-        {
-            float random = (float)rand() / (float)RAND_MAX;
-            float diff = _maxAngle - _minAngle;
-            float randAngle = _minAngle + (diff * (float)rand()) / (RAND_MAX + 1.0f);
-            std::cout << "randomAngle = " << randAngle << " " << _minAngle << " " << _maxAngle << std::endl;
-            angle += randAngle;
-        }
+        float angle = 0.0f;
+        float randAngle = 0.0f;
         for (int i = 0; i < _lSystem.length(); i++)
         {
             char curr = _lSystem.at(i);
             previous_point = current_point;
             float x = 0.0f;
             float y = 0.0f;
-            float randAngle = 0.0f;
-            if (stochastic)
-            {
-                float random = (float)rand() / (float)RAND_MAX;
-                float diff = _maxAngle - _minAngle;
-                float randAngle = _minAngle + (diff * (float)rand()) / (RAND_MAX + 1.0f);
-                std::cout << "randomAngle = " << randAngle << " " << _minAngle << " " << _maxAngle << std::endl;
-                angle = randAngle;
-            }
-
-
+           
             if (curr == '0')
             {
-                x = sin(2 * PI * (angle / 360)) * LEAF_LENGTH;
-                y = cos(2 * PI * (angle / 360)) * LEAF_LENGTH;
+                float length = 0.0f;
+                if (stochastic)
+                {
+                    float diff = _maxLeafLength - _minLeafLength;
+                    length = _minLeafLength + (diff * (float)rand()) / (RAND_MAX + 1.0f);
+                }
+                else
+                {
+                    length = LEAF_LENGTH;
+                }
+                x = sin(2 * PI * (angle / 360)) * length;
+                y = cos(2 * PI * (angle / 360)) * length;
                 current_point.x += x;
                 current_point.y += y;
                 _Vertices.push_back(previous_point);
@@ -149,8 +183,18 @@ namespace assignment3
             }
             else if (curr == '1')
             {
-                x = sin(2 * PI * (angle / 360)) * BRANCH_LENGTH;
-                y = cos(2 * PI * (angle / 360)) * BRANCH_LENGTH;
+                float length = 0.0f;
+                if (stochastic)
+                {
+                    float diff = _maxBranchLength - _minBranchLength;
+                    length = _minBranchLength + (diff * (float)rand()) / (RAND_MAX + 1.0f);
+                }
+                else
+                {
+                    length = BRANCH_LENGTH;
+                }
+                x = sin(2 * PI * (angle / 360)) * length;
+                y = cos(2 * PI * (angle / 360)) * length;
                 current_point.x += x;
                 current_point.y += y;
                 _Vertices.push_back(previous_point);
@@ -161,13 +205,14 @@ namespace assignment3
                 turtleStack.push(TurtleValue(current_point, angle));
                 if (stochastic)
                 {
+                    float diff = _maxAngle - _minAngle;
+                    randAngle = _minAngle + (diff * (float)rand()) / (RAND_MAX + 1.0f);
                     angle -= randAngle;
                 }
                 else
                 {
                     angle -= ANGLE_MAX;
                 }
-                
             }
             else if (curr == ']')
             {
@@ -177,6 +222,8 @@ namespace assignment3
                 TurtleValue value(turtleStack.top());
                 if (stochastic)
                 {
+                    float diff = _maxAngle - _minAngle;
+                    randAngle = _minAngle + (diff * (float)rand()) / (RAND_MAX + 1.0f);
                     angle = value.angle() + randAngle;
                 }
                 else

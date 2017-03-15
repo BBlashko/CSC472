@@ -31,15 +31,23 @@ namespace assignment3
         const std::string& lSystem() const { return _lSystem; };
         std::string& lSystem() { return _lSystem; };
 
-        const float &minAngle() const { return _minAngle; };
-        float& minAngle() { return _minAngle; };
-
-        const float &maxAngle() const { return _maxAngle; };
-        float& maxAngle() { return _maxAngle; };
+        void setRandomizeLanguage(bool randomLanguage) {
+            _randomLanguage = randomLanguage;
+        }
 
         void setAngleRange(float min, float max) { 
             _minAngle = min;
             _maxAngle = max;
+        }
+
+        void setBranchRange(float min, float max) {
+            _minBranchLength = min;
+            _maxBranchLength = max;
+        }
+
+        void setLeafRange(float min, float max) {
+            _minLeafLength = min;
+            _maxLeafLength = max;
         }
     private:
         std::string _lAxiom;
@@ -52,7 +60,14 @@ namespace assignment3
         std::vector<Point> _Vertices;
 
         //Stochastic values
-        float _minAngle = -0.0f;
-        float _maxAngle = 45.0f;
+        bool _randomLanguage = false;
+        float _minAngle = 0.0f;
+        float _maxAngle = 90.0f;
+
+        float _minBranchLength = 0.0f;
+        float _maxBranchLength = 0.05f;
+
+        float _minLeafLength = 0.0f;
+        float _maxLeafLength = 0.025f;
     };
 }
