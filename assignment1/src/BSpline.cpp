@@ -24,7 +24,8 @@ void main()
     //Instantiate BSpline
     BSpline::BSpline() :
         mBuffer(GL_ARRAY_BUFFER),
-        mBuffer_knots(GL_ARRAY_BUFFER)
+        mBuffer_knots(GL_ARRAY_BUFFER),
+        mBuffer_basis_function(GL_ARRAY_BUFFER)
     {
         std::vector<atlas::gl::ShaderUnit> shaders
         {
@@ -33,6 +34,7 @@ void main()
 
         setOrderAndDegree(3);
         generateKnots();
+        generateBasisFunctions();
         calculateBSplinePoints(200, order, knots);
 
         mShaders.push_back(atlas::gl::Shader(shaders));
@@ -43,7 +45,7 @@ void main()
         mVao.bindVertexArray();
         mBuffer.bindBuffer();
         mBuffer.bufferData(atlas::gl::size<atlas::math::Vector>(BSplinePoints.size()),
-            BSplinePoints.data(), GL_STREAM_DRAW);
+            BSplinePoints.data(), GL_DYNAMIC_DRAW);
         mBuffer.vertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0,
             atlas::gl::bufferOffset<float>(0));
         mVao.enableVertexAttribArray(0);
@@ -58,7 +60,7 @@ void main()
         mVao_knots.bindVertexArray();
         mBuffer_knots.bindBuffer();
         mBuffer_knots.bufferData(atlas::gl::size<atlas::math::Vector>(knots_coords.size()),
-            knots_coords.data(), GL_STREAM_DRAW);
+            knots_coords.data(), GL_DYNAMIC_DRAW);
         mBuffer_knots.vertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0,
             atlas::gl::bufferOffset<float>(0));
         mVao_knots.enableVertexAttribArray(0);
@@ -66,15 +68,24 @@ void main()
         mBuffer_knots.unBindBuffer();
         mVao_knots.unBindVertexArray();
 
+        //basisFunctions
+        mVao_basis_functions.bindVertexArray();
+        mBuffer_basis_function.bindBuffer();
+        mBuffer_basis_function.bufferData(atlas::gl::size<atlas::math::Vector>(basis_functions.size()),
+            basis_functions.data(), GL_DYNAMIC_DRAW);
+        mBuffer_basis_function.vertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0,
+            atlas::gl::bufferOffset<float>(0));
+        mVao_basis_functions.enableVertexAttribArray(0);
+
+        mBuffer_basis_function.unBindBuffer();
+        mVao_basis_functions.unBindVertexArray();
+
         mShaders[0].disableShaders();
     }
 
     //Render the generated splines
     void BSpline::renderGeometry()
     {
-        //Render Control Points
-        controlPoints.renderGeometry();
-
         if (!mShaders[0].shaderProgramValid())
         {
             return;
@@ -99,11 +110,24 @@ void main()
             glUniform4f(mUniforms["colour"], rgb, rgb, 255.0f, 1);
 
             glPointSize(10.0f);
-            glDrawArrays(GL_POINT, 0, knots.size());
+            glDrawArrays(GL_POINTS, 0, knots.size());
 
             mVao_knots.unBindVertexArray();
+
+            mVao_basis_functions.bindVertexArray();
+
+            rgb = 0.0f;
+            glUniform4f(mUniforms["colour"], rgb, 255.0f, rgb, 1);
+
+            glPointSize(10.0f);
+            glDrawArrays(GL_LINES, 0, basis_functions.size());
+            
+            mVao_basis_functions.unBindVertexArray();
             mShaders[0].disableShaders();
         }
+        //Render Control Points
+        controlPoints.renderGeometry();
+
     }
 
     //Deboor Cox algorithm
@@ -140,6 +164,7 @@ void main()
     //Calculate the spline points to be rendered.
     void BSpline::calculateBSplinePoints(int levelOfDetail, int k, Knots knots)
     {
+        basis_functions.clear();
         std::vector<Vector3> points = controlPoints.getPositions();
         BSplinePoints.clear();
         for (int i = 0; i != levelOfDetail; ++i)
@@ -152,8 +177,10 @@ void main()
             for (int j = 0; j < points.size(); j++)
             {
                 float deBoorVal = deBoorCox(u, j, k, knots);
+                basis_functions.push_back(Vector3(-0.5f + u, deBoorVal * 0.5 - 0.95f, 0.0f));
                 q += points.at(j) * deBoorVal;
             }
+            
             BSplinePoints.push_back(q);
         }
     }
@@ -189,6 +216,11 @@ void main()
         }
     }
 
+    void BSpline::generateBasisFunctions()
+    {
+
+    }
+
     //Add a Control Point
     void BSpline::addControlPoint(double x, double y)
     {
@@ -203,7 +235,7 @@ void main()
         knots_coords.clear();
         for (int i = 0; i < knots.size(); i++)
         {
-            atlas::math::Vector vec3(knots.at(i) * 0.5f, -0.75f, 0.0f);
+            atlas::math::Vector vec3(-0.5f + knots.at(i), -0.95f, 0.0f);
             knots_coords.push_back(vec3);
         }
         calculateBSplinePoints(100, order, knots);
@@ -235,17 +267,19 @@ void main()
         //Bspline
         mBuffer.bindBuffer();
         mBuffer.bufferData(atlas::gl::size<atlas::math::Vector>(BSplinePoints.size()),
-            BSplinePoints.data(), GL_STREAM_DRAW);
-        mBuffer.vertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0,
-            atlas::gl::bufferOffset<float>(0));
+            BSplinePoints.data(), GL_DYNAMIC_DRAW);
         mBuffer.unBindBuffer();
 
-        //knots **NOT WORKING**
+        //basis functions
+        mBuffer_basis_function.bindBuffer();
+        mBuffer_basis_function.bufferData(atlas::gl::size<atlas::math::Vector>(basis_functions.size()),
+            basis_functions.data(), GL_DYNAMIC_DRAW);
+        mBuffer_basis_function.unBindBuffer();
+
+        //knots
         mBuffer_knots.bindBuffer();
         mBuffer_knots.bufferData(atlas::gl::size<atlas::math::Vector>(knots_coords.size()),
-            knots_coords.data(), GL_STREAM_DRAW);
-        mBuffer_knots.vertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0,
-            atlas::gl::bufferOffset<float>(0));
+            knots_coords.data(), GL_DYNAMIC_DRAW);
         mBuffer_knots.unBindBuffer();
     }
 }

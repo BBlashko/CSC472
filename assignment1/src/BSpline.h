@@ -25,6 +25,7 @@ namespace assignment1
         void removeControlPoint();
         int getDegree();
         void generateKnots();
+        void generateBasisFunctions();
         void BSpline::updateSpline();
 
 	private:
@@ -36,10 +37,13 @@ namespace assignment1
 		atlas::gl::Buffer mBuffer;
         atlas::gl::VertexArrayObject mVao_knots;
         atlas::gl::Buffer mBuffer_knots;
+        atlas::gl::VertexArrayObject mVao_basis_functions;
+        atlas::gl::Buffer mBuffer_basis_function;
 
         std::vector<float> knots;
         std::vector<atlas::math::Vector> knots_coords;
         std::vector<Vector3> BSplinePoints;
+        std::vector<Vector3> basis_functions;
         ControlPoints controlPoints;
 
         int degree;
