@@ -17,5 +17,6 @@ namespace assignment3
         void renderScene() override;
     private:
         PythagorasTree _pTree;
+        int _current_level;
     };
 }
