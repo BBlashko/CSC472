@@ -19,5 +19,6 @@ namespace assignment3
     private:
         PythagorasTree _pTree;
         int _current_level;
+        bool _current_stochastic;
     };
 }

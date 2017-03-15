@@ -3,6 +3,7 @@
 #define PI 3.14159265358979323846
 #define BRANCH_LENGTH 0.025f
 #define LEAF_LENGTH 0.0125f
+#define ANGLE_MAX 45.0f
 
 namespace assignment3
 {
@@ -21,7 +22,7 @@ namespace assignment3
 
     PythagorasTree::PythagorasTree(std::string axiom) : _Buffer(GL_ARRAY_BUFFER), _lAxiom(axiom) {
 
-        generateLSystem(0);
+        generateLSystem(0, false);
 
         std::vector<atlas::gl::ShaderUnit> shaders
         {
@@ -98,7 +99,7 @@ namespace assignment3
         recurse(system, n - 1);
     }
 
-    void PythagorasTree::generateLSystem(int recursionLevel)
+    void PythagorasTree::generateLSystem(int recursionLevel, bool stochastic)
     {
         std::cout << "Generating pythagoras tree structure for a recursion level of: " << recursionLevel << std::endl;
         _lSystem = _lAxiom;        
@@ -108,14 +109,34 @@ namespace assignment3
         Stack turtleStack;
         Point current_point = Point(0.0f, -0.8f, 0.0f);
         Point previous_point;
-        float angle = 0;
+      
 
+        float angle = 0;
+        
+        if (stochastic)
+        {
+            float random = (float)rand() / (float)RAND_MAX;
+            float diff = _maxAngle - _minAngle;
+            float randAngle = _minAngle + (diff * (float)rand()) / (RAND_MAX + 1.0f);
+            std::cout << "randomAngle = " << randAngle << " " << _minAngle << " " << _maxAngle << std::endl;
+            angle += randAngle;
+        }
         for (int i = 0; i < _lSystem.length(); i++)
         {
             char curr = _lSystem.at(i);
             previous_point = current_point;
             float x = 0.0f;
             float y = 0.0f;
+            float randAngle = 0.0f;
+            if (stochastic)
+            {
+                float random = (float)rand() / (float)RAND_MAX;
+                float diff = _maxAngle - _minAngle;
+                float randAngle = _minAngle + (diff * (float)rand()) / (RAND_MAX + 1.0f);
+                std::cout << "randomAngle = " << randAngle << " " << _minAngle << " " << _maxAngle << std::endl;
+                angle = randAngle;
+            }
+
 
             if (curr == '0')
             {
@@ -138,7 +159,15 @@ namespace assignment3
             else if (curr == '[')
             {
                 turtleStack.push(TurtleValue(current_point, angle));
-                angle -= 45.0f;
+                if (stochastic)
+                {
+                    angle -= randAngle;
+                }
+                else
+                {
+                    angle -= ANGLE_MAX;
+                }
+                
             }
             else if (curr == ']')
             {
@@ -146,7 +175,14 @@ namespace assignment3
                     break;
 
                 TurtleValue value(turtleStack.top());
-                angle = value.angle() + 45;
+                if (stochastic)
+                {
+                    angle = value.angle() + randAngle;
+                }
+                else
+                {
+                    angle = value.angle() + ANGLE_MAX;
+                }
                 current_point = value.position();
                 turtleStack.pop();
             }

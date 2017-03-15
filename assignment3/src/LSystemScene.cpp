@@ -17,12 +17,35 @@ namespace assignment3
         ImGui::Begin("LSystem - Pythagoras Tree");
 
         static int recursion = 0;
+        static bool stochastic;
+        static float minAngle = 0.0f;
+        static float maxAngle = 45.0f;
+
         ImGui::Text("Axiom: 0");
+        ImGui::Checkbox("Stochastic", &stochastic);
+        if (stochastic)
+        {
+            ImGui::SliderFloat("Minimim Angle", &minAngle, 0.0f, 45.0f);
+            ImGui::SliderFloat("Maximum Angle", &maxAngle, 0.0f, 45.0f);
+            if (minAngle > maxAngle)
+            {
+                minAngle = maxAngle;
+            }
+            if (minAngle != _pTree.minAngle() || maxAngle != _pTree.maxAngle())
+            {
+                _pTree.setAngleRange(minAngle, maxAngle);
+                _pTree.generateLSystem(_current_level, _current_stochastic);
+            }
+        }
+
+
         ImGui::InputInt("Level", &recursion);
-        if (_current_level != recursion)
+
+        if (_current_level != recursion || _current_stochastic != stochastic)
         {
             _current_level = recursion;
-            _pTree.generateLSystem(recursion);
+            _current_stochastic = stochastic;
+            _pTree.generateLSystem(_current_level, _current_stochastic);
         }
         ImGui::TextWrapped(_pTree.lSystem().c_str());
 

@@ -26,10 +26,21 @@ namespace assignment3
 
         void renderGeometry() override;
         void recurse(std::string &system, int n);
-        void generateLSystem(int recursionLevel);
+        void generateLSystem(int recursionLevel, bool stochastic);
 
         const std::string& lSystem() const { return _lSystem; };
         std::string& lSystem() { return _lSystem; };
+
+        const float &minAngle() const { return _minAngle; };
+        float& minAngle() { return _minAngle; };
+
+        const float &maxAngle() const { return _maxAngle; };
+        float& maxAngle() { return _maxAngle; };
+
+        void setAngleRange(float min, float max) { 
+            _minAngle = min;
+            _maxAngle = max;
+        }
     private:
         std::string _lAxiom;
         std::string _lSystem;
@@ -39,5 +50,9 @@ namespace assignment3
         std::size_t _NumIndices;
 
         std::vector<Point> _Vertices;
+
+        //Stochastic values
+        float _minAngle = -0.0f;
+        float _maxAngle = 45.0f;
     };
 }
