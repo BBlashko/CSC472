@@ -75,15 +75,6 @@ void main()
 		mShaders[0].disableShaders();
 	}
 
-    bool ControlPoints::intersectsPoint(const double xPos, const double yPos, const double threshold)
-    {
-        if (abs(_xPos - xPos) < threshold && abs(_yPos - yPos) < threshold)
-        {
-            return true;
-        }
-        return false;
-    }
-
     //Update Buffere Objects
 	void ControlPoints::updateObjects()
 	{

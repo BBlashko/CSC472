@@ -11,7 +11,7 @@
 atlas::utils::WindowSettings config_window_settings() {
     auto window_settings = atlas::utils::WindowSettings();
     window_settings.title = "Assignment 2";
-    window_settings.contextVersion = std::tuple<int, int>(3, 3);
+    window_settings.contextVersion = std::tuple<int, int>(4, 3);
     window_settings.isMaximized = true;
     window_settings.windowSize = std::tuple<int, int>(400, 400);
 
@@ -22,7 +22,6 @@ int main(void) {
     auto window_settings = config_window_settings();
 
     atlas::gl::setGLErrorSeverity(ATLAS_GL_ERROR_SEVERITY_HIGH | ATLAS_GL_ERROR_SEVERITY_MEDIUM);
-
 
     //Create window
     atlas::utils::Application::getInstance().createWindow(window_settings);
