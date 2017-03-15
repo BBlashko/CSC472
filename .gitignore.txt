@@ -1,2 +1,2 @@
-atlas
-build
+*atlas
+*build

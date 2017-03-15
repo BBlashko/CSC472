@@ -1,6 +1,0 @@
-﻿  Building Custom Rule C:/GitWorkspace/CSC472/atlas/external/imgui/CMakeLists.txt
-  CMake does not need to re-run because C:\GitWorkspace\CSC472\build\atlas\external\imgui\CMakeFiles\generate.stamp is up-to-date.
-  imgui.cpp
-  imgui_draw.cpp
-  Generating Code...
-  imgui.vcxproj -> C:\GitWorkspace\CSC472\build\atlas\external\imgui\Debug\imgui.lib
