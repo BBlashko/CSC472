@@ -18,7 +18,7 @@ namespace assignment1
 
 		void renderGeometry() override;
 		void setDrawLines(bool b);
-        void setControlPointPositions();
+        void setControlPointPositions(std::vector<Vector3>);
         void setOrderAndDegree(int deg);
         void addControlPoint(double x, double y);
         int getNumberOfControlPoints();

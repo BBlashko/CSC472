@@ -18,8 +18,7 @@ namespace assignment1
 
 		void updateObjects();
 		void renderGeometry() override;
-        bool intersectsPoint(const double xPos, const double yPos, const double theshold);
-        void setDrawLines(bool b);
+		void setDrawLines(bool b);
         int getNumberOfPoints();
         void removeEndPoint();
 

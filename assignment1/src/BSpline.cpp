@@ -31,7 +31,7 @@ void main()
             { gridFS, GL_FRAGMENT_SHADER, true }
         };
 
-        setOrderAndDegree(0);
+        setOrderAndDegree(3);
         generateKnots();
         calculateBSplinePoints(200, order, knots);
 
@@ -248,5 +248,4 @@ void main()
             atlas::gl::bufferOffset<float>(0));
         mBuffer_knots.unBindBuffer();
     }
-
 }

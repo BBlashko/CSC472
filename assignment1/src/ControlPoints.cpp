@@ -67,7 +67,7 @@ void main()
 		{
 			glDrawArrays(GL_LINE_STRIP, 0, _positions.size());
 		}
-
+		
 		glPointSize(5.0f);
 		glDrawArrays(GL_POINTS, 0, _positions.size());
 
@@ -94,5 +94,4 @@ void main()
 			atlas::gl::bufferOffset<float>(0));
 		mBuffer.unBindBuffer();
 	}
-
 }
